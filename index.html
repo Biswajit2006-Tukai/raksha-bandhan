@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Raksha Bandhan ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts">
+        <span>❤️</span>
+        <span>✨</span>
+        <span>🎀</span>
+        <span>❤️</span>
+        <span>✨</span>
+    </div>
+
+
+    <!-- SCREEN 1 : WELCOME -->
+
+    <section class="screen active" id="welcome">
+
+        <div class="overlay"></div>
+
+        <div class="welcome-content">
+
+            <p class="small-title">
+                A SPECIAL JOURNEY FOR
+            </p>
+
+            <h1>My Dearest Didi ❤️</h1>
+
+            <p class="subtitle">
+                Some bonds are beyond words...
+                <br>
+                and ours is one of them. 🫶🏻
+            </p>
+
+            <button onclick="startJourney()">
+                Begin Our Journey ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 2 : RAKHI SELECTION -->
+
+    <section class="screen" id="rakhiSection">
+
+        <div class="cinematic-card">
+
+            <p class="step">STEP 01</p>
+
+            <h1>Choose a Rakhi 🎀</h1>
+
+            <p>
+                Pick the most beautiful Rakhi for your brother ❤️
+            </p>
+
+
+            <div class="rakhi-container">
+
+                <img src="images/rakhi1.png"
+                     onclick="selectRakhi(this.src)"
+                     class="rakhi">
+
+                <img src="images/rakhi2.png"
+                     onclick="selectRakhi(this.src)"
+                     class="rakhi">
+
+                <img src="images/rakhi3.png"
+                     onclick="selectRakhi(this.src)"
+                     class="rakhi">
+
+                <img src="images/rakhi4.png"
+                     onclick="selectRakhi(this.src)"
+                     class="rakhi">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 3 : HAND -->
+
+    <section class="screen" id="handSection">
+
+        <div class="cinematic-card">
+
+            <p class="step">STEP 02</p>
+
+            <h1>I'm Ready, Didi ❤️</h1>
+
+            <p>Now tie the Rakhi on my hand 🎀</p>
+
+
+            <div class="hand-scene">
+
+                <div class="hand">
+                    🤚
+                </div>
+
+                <img
+                    id="selectedRakhi"
+                    class="flying-rakhi">
+
+            </div>
+
+
+            <button onclick="tieRakhi()">
+                Tie Rakhi ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 4 : SWEET -->
+
+    <section class="screen" id="sweetSection">
+
+        <div class="cinematic-card">
+
+            <p class="step">STEP 03</p>
+
+            <h1>Rakhi Tied Successfully 🎉</h1>
+
+            <div class="success">
+                🎀❤️🎉
+            </div>
+
+            <h2>Now Feed Your Brother Something Sweet 😋</h2>
+
+            <div class="sweet" onclick="feedSweet()">
+                🍬
+            </div>
+
+            <p>Click the sweet ❤️</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 5 : BLESSING -->
+
+    <section class="screen" id="blessingSection">
+
+        <div class="cinematic-card">
+
+            <p class="step">STEP 04</p>
+
+            <h1>Your Blessings 🙏❤️</h1>
+
+            <div class="blessing-animation">
+                🙇‍♂️
+            </div>
+
+            <p class="emotional">
+
+                Didi, your love, care and blessings
+                will always be my biggest strength ❤️
+
+            </p>
+
+
+            <button onclick="nextGift()">
+                One More Surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 6 : GIFT -->
+
+    <section class="screen" id="giftSection">
+
+        <div class="cinematic-card">
+
+            <p class="step">STEP 05</p>
+
+            <h1>A Gift For My Didi 🎁</h1>
+
+            <p>Click the gift ❤️</p>
+
+            <div class="gift-box" onclick="openGift()">
+
+                🎁
+
+            </div>
+
+
+            <div class="gift-message" id="giftMessage">
+
+                <h2>For My Lovely Didi ❤️</h2>
+
+                <p>
+                    You are not just my sister...
+                    You are my best friend,
+                    my protector and my biggest support.
+                </p>
+
+                <p>
+                    No matter where life takes us,
+                    you will always have
+                    a very special place in my heart ❤️
+                </p>
+
+                <p class="love">
+                    Love You So Much Didi 🫶🏻❤️
+                </p>
+
+            </div>
+
+
+            <button id="finalBtn"
+                    class="hidden"
+                    onclick="finalScreen()">
+
+                One Last Message ❤️
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FINAL SCREEN -->
+
+    <section class="screen" id="finalSection">
+
+        <div class="final-content">
+
+            <div class="pranam">
+                🙇‍♂️
+            </div>
+
+            <h1>Pranam Didi 🙏❤️</h1>
+
+            <h2>Happy Raksha Bandhan 🎀</h2>
+
+            <p>
+
+                Thank you for always being there
+                whenever I needed you ❤️
+
+            </p>
+
+            <p class="final-love">
+
+                Love You Forever Didi 🫶🏻❤️
+
+            </p>
+
+            <p class="signature">
+
+                — Your Loving Brother ❤️
+
+            </p>
+
+            <button onclick="restartJourney()">
+                ❤️ Watch Again
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
